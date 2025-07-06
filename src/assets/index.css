@@ -1,0 +1,277 @@
+@import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'slick';
+  src: url('/fonts/slick.woff') format('woff'),
+       url('/fonts/slick.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+  color: rgb(183, 182, 182) !important;
+}
+
+.header{
+  background-color:#0a1821;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.mane{
+  background-color: #0a1821db;
+  position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.swiper-horizontal {
+  height: 100%;
+}
+
+input::placeholder {
+  color: rgb(183, 182, 182);
+  /* font-style: italic; */
+  font-weight: 600;
+}
+
+.cearchicon {
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.drop__bar_menu {
+  width: 340px;
+  height: 100%;
+  background: #0a1821f4 !important;
+  position: fixed;
+  z-index: 10000000;
+
+  right: 0;
+  top: 0;
+  overflow-y: auto;
+  padding: 10px;
+  display: none;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  transform: translateX(300px); /* Dastlab yashirin */
+  /* Harakat silliq va 2 sekundda */
+  z-index: 999;
+}
+
+.drop__bar_menu_active {
+  display: block;
+  transition: all 2s ease;
+  transform: translateX(0);
+
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  gap: 25px;
+}
+
+.list_nav {
+  font-weight: 700;
+  font-family: "FoglihtenNo06" !important;
+  font-size: 18px !important;
+  display: flex;
+  align-items: center;
+  font-weight: 900 !important;
+  color: #ffffff;
+  background-color: transparent !important;
+
+}
+
+.list_nav:hover, .list_nav:active{
+  color: #ffffff;
+  background-color: transparent !important;
+}
+
+
+.dropdown-item{
+  padding: 5px 15;
+
+}
+
+.dropdown-item:hover{
+  background: #0a1821f4 !important;
+
+}
+
+.dropdown-menu{
+  border-radius: 5px;
+ 
+}
+
+.ant-pagination-options-size-changer {
+  display: none !important;
+}
+
+.MarqueeImg{
+  padding: 5px 0;
+  background-color: #d7d7d7;
+  /* height: 60px !important; */
+}
+
+
+.carousel-3d-wrapper {
+  /* perspective: 1500px; */
+  width: 100%;
+  padding: 50px;
+  height: 300px;
+
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-3d-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: flat;
+  transition: transform 0.3s ease;
+}
+
+.carousel-3d-card {
+  position: absolute;
+  width: 180px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  transition: all 0.6s ease;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 5px rgba(9, 17, 52, 0.745);
+  /* box-shadow: -2px 3px 30px -1px rgba(34, 60, 80, 0.59); */
+  left: 50%;
+  transform-origin: center center;
+  backface-visibility: hidden; /* Orqa tomonni yashirish */
+}
+
+.carousel-3d-card.active {
+  width: 220px;
+  height: 220px;
+  z-index: 999;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 0 0 16px 16px;
+}
+
+.slick-dots{
+  bottom: -80px !important; 
+}
+
+.list_nav .dropdown-menu {
+  margin: 0 !important;
+}
+
+:where(.css-dev-only-do-not-override-1m63z2v).ant-card-bordered{
+  border: none !important;
+  border-radius: 0;
+}
+
+.ant-card-bordered {
+  border-radius: 0 !important;
+}
+
+.ant-card-body{
+  padding: 0 !important;
+}
+
+.ant-empty-description{
+  color: #fff !important;
+}
+
+.ant-pagination-prev,
+.ant-pagination-next {
+  background-color: white !important;
+  border-radius: 50% !important;
+  padding: 0 8px;
+  transition: background-color 0.3s;
+}
+
+.ant-pagination-item {
+  border: 1px solid #d9d9d9;
+  border-radius: 50% !important;
+  /* padding: 0 8px; */
+  height: 32px;
+  min-width: 32px;
+  line-height: 32px;
+  text-align: center;
+  background-color: #023453 !important;
+  transition: all 0.3s;
+  margin: 0 4px;
+  color: #ffffff9e;
+}
+
+.ant-pagination-item-active {
+  border-color: #1890ff;
+  background-color: #e6f7ff;
+  color: #1890ff;
+  font-weight: 500;
+  color: #fff;
+  box-shadow: 0px 0px 5px #1890ff;
+}
+
+.ant-pagination-jump-prev,
+.ant-pagination-jump-next {
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  color: #fff !important;
+
+  
+}
+
+.ant-pagination-item-ellipsis{
+  color: #fff !important;
+}
+
+.loading{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: chocolate; */
+  z-index: 999999999999;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.pagination{
+    width: 100%;
+    padding: 20px 0;
+    background-color: #0a1821;
+    margin: 20px auto 1px;
+    text-align: center;
+}
