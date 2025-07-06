@@ -160,18 +160,21 @@ const Admin = () => {
     
   }
 
-const token = localStorage.getItem("tokenn");
-console.log("salom");
+const token = localStorage.getItem("token") ?true :false;
 
-useEffect(() => {
+useEffect(()=>{
   if (!token) {
     navigate("/admin/register");
   }
-}, [token, navigate]);
+},[navigate, token])
+
 
 const LogoutUsr =()=>{
-  localStorage.removeItem("tokenn")
-  navigate("/admin/register")
+  localStorage.removeItem("token")
+  // console.log( localStorage.getItem("token"));
+  navigate("/admin/register");
+  
+  
 }
 
   return (

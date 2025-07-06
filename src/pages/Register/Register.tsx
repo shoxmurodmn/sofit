@@ -10,7 +10,9 @@ import useLogin from "../../module/auth/hook/useList";
 
 
 const Register = () => {
-        const { doLogin, loading, error } = useLogin();
+
+        const [rest, setRest] = useState<HTMLInputElement>("");
+        const { doLogin, loading, error } = useLogin(rest);
 
         const [login, setLogin] = useState<boolean>(false);
         const [reg, setReg] = useState<boolean>(true);
@@ -30,8 +32,12 @@ const Register = () => {
                 }
         }
 
+        const tokenn = localStorage.getItem("token")
 
-
+        if (tokenn) {
+           navigate("/admin")
+                
+        }
 
         const handleSubmit = (e: React.FormEvent) => {
                 e.preventDefault(); // formani reload bo'lishidan saqlaydi
@@ -40,15 +46,16 @@ const Register = () => {
                 const email = emailRef.current?.value;
                 const pasword = paswordRef.current?.value;
 
+                // setRest({name, email, pasword})
+
                 console.log( email, pasword);
                 doLogin(email, pasword);
-                if (email=="admin" && pasword== "admin" ) {
+
+                if (email=="admsin" && pasword== "admisn" ) {
                         localStorage.setItem("tokenn", true)
                         console.log();
                         navigate("/admin")
                 }
-
-
         };
 
         const handleLoginTest = async () => {
