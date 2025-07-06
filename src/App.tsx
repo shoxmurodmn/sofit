@@ -1,18 +1,14 @@
-import { useState } from 'react'
-import Register from "./pages/Register"
-import { GoogleOAuthProvider }  from  '@react-oauth/google';
-import Rooter from './router'
-import './App.css'
+import React from "react";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import Rooter from "./router";
+import "./App.css";
 
-
-function App() {
-
-
+const App: React.FC = () => {
   return (
-    <GoogleOAuthProvider>
-      <Rooter/>
+    <GoogleOAuthProvider clientId="YOUR_GOOGLE_CLIENT_ID">
+      <Rooter />
     </GoogleOAuthProvider>
-  )
-}
+  );
+};
 
 export default App;

@@ -2,7 +2,6 @@ import { useRef, useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 
 import cls from "./Register.module.scss";
-import GoogleAuth from "../../components/YourLoginComponent/YourLoginComponent";
 import useLogin from "../../module/auth/hook/useList";
 
 const Register = () => {
@@ -123,7 +122,7 @@ const Register = () => {
               />
 
               <div className={cls.logotib}></div>
-              <GoogleAuth />
+             
               <div onClick={handleLoginTest}></div>
             </div>
           </form>
